@@ -1,4 +1,4 @@
-#! /home/jstitt/repos/avent-of-coe-2023/.venv/bin/python3
+#!/home/jstitt/repos/advent-of-code-2023/.venv/bin/python3
 # Advent of Code 2023 - Day 20 pt2 and 1 sorta
 
 """
@@ -155,9 +155,8 @@ class Soln:
                 who, where, sig = Q.pop(0)
                 # quests = ["xl", "ln", "xp", "gp"]
                 # shared = []
-                # if who == "gp" and where == "df" and sig == HIGH:
-                #     print(f"gp done at {i=}")
-                #     exit(0)
+                if who == "gp" and where == "df" and sig == HIGH:
+                    print(f"gp done at {i=}")
                 # xl = 4050
                 # ln = 4020
                 # xp = 4056
