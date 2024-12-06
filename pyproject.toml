@@ -1,0 +1,12 @@
+[tool.basedpyright]
+reportUnusedCallResult = false
+reportMissingTypeStubs = false
+reportUnusedImport = false
+reportUnknownMemberType = false
+reportUnknownVariableType = false
+reportUnknownParameterType = false
+reportUnknownArgumentType = false
+reportUnknownLambdaType = false
+reportUnannotatedClassAttribute = false
+reportImplicitOverride = false
+reportMissingParameterType = false
