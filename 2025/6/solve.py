@@ -28,8 +28,27 @@ class Soln:
             ic(self.n, self.m)
 
     def solve(self):
+        nums = []
+        n = 1000
         for line in self.lines:
-            ic(line)
+            patt = r"\d+"
+            matches = re.findall(patt, line)
+            ic(len(matches))
+            nums.append([int(x) for x in matches])
+        ops = self.lines[-1]
+        patt2 = r"[\*\+]"
+        matches = re.findall(patt2, ops)
+        ic(n)
+        res = 0
+        for i in range(n):
+            op = matches[i]
+            numbers = [nums[j][i] for j in range(len(self.lines) - 1)]
+            ic(numbers)
+            if op == "*":
+                res += functools.reduce(lambda u, v: u * v, numbers)
+            elif op == "+":
+                res += sum(numbers)
+        return res
 
 
 # fmt: off
